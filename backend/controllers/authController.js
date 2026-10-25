@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const { body, validationResult } = require('express-validator');
 
-const JWT_SECRET = 'ta_cle_secrete_a_changer'; // Mieux : utiliser .env
+const { jwtSecret: JWT_SECRET } = require('../config/config');
 
 // Inscription
 exports.register = [
